@@ -1,6 +1,6 @@
 Package.describe({
   name: 'jamgold:isdevelopment',
-  version: '0.0.2',
+  version: '0.0.3',
   // Brief, one-line summary of the package.
   summary: 'add Meteor.isDevelopment flag',
   // URL to the Git repository containing the source code for this package.
@@ -12,5 +12,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
+  api.use('templating', 'client');
   api.addFiles('lib/isdevelopment.js');
+  api.addFiles('client.js', 'client')
 });
